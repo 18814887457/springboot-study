@@ -84,7 +84,7 @@ public class GlobalExceptionHandler
     @ExceptionHandler(value = BizException.class)
     public AjaxResult bizExceptionHandler(HttpServletRequest req, BizException e){
         log.error("发生业务异常！原因是：{}",e.getErrorMsg());
-        return AjaxResult.error(e.getErrorMsg());
+        return AjaxResult.error(e.getErrorMsg(),e.getErrorMsg());
     }
 
 

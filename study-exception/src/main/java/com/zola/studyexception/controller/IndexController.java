@@ -19,7 +19,7 @@ public class IndexController {
         User user = new User();
 
         if(user.getUsername() == null) {
-            throw new NullPointerException();
+            throw new BizException(1,"error");
         }
 
         System.out.println(user.getUsername());
